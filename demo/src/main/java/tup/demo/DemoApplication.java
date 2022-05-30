@@ -18,6 +18,11 @@ public class DemoApplication {
 
 	@GetMapping("/")
 	public String hola(@RequestParam(value = "name", defaultValue = "José") String name) {
+
+		/*
+		 * Usamos varios métodos de la clase User, pero no los implementamos nosotros,
+		 * sino que fueron generados por la anotación @Data de Lombok.
+		 */
 		User user = new User();
 		user.setName(name);
 
